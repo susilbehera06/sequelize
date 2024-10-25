@@ -9,7 +9,7 @@ import UserModel from "./models/user.model.js"
 const app = express();
 const PORT = process.env.PORT || 8000
 
-app.use(morgan());
+app.use(morgan('combined'));
 app.use(express.json());
 
 app.use('/api/v1', userRouter);
